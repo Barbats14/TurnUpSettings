@@ -1,0 +1,112 @@
+
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <PreferenceCategory
+        android:title="Personal Information"
+        android:key="pref_key_personalInfo_settings">
+
+        <EditTextPreference
+            android:maxLines="1"
+            android:inputType="textCapWords"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:key="pref_key_username"
+            android:summary="Change your username"
+            android:title="Username"
+            android:defaultValue="Troban"></EditTextPreference>
+
+        <EditTextPreference
+            android:maxLines="1"
+            android:inputType="textCapWords"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:key="pref_key_fullName"
+            android:summary="Change your full name"
+            android:title="Full Name"
+            android:defaultValue="Eric Botas"></EditTextPreference>
+
+        <Preference
+            android:key="pref_key_username"
+            android:summary="Change your date of birth"
+            android:title="Birtdate"></Preference>
+
+        <EditTextPreference
+            android:maxLines="1"
+            android:inputType="textCapWords"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:key="pref_key_password"
+            android:summary="Change your password"
+            android:title="Password"
+            android:defaultValue="mounlis"></EditTextPreference>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="My Account"
+        android:key="personal_key_account_settings">
+
+        <MultiSelectListPreference
+            android:key="pref_key_sports"
+            android:summary="Sports you're interested in"
+            android:entries="@array/sports"
+            android:entryValues="@array/sports_values"
+            android:title="Sports"
+            android:dialogTitle="Select your prefered sports"
+            android:defaultValue="1|-1"
+            android:negativeButtonText="@null"
+            android:positiveButtonText="@null"></MultiSelectListPreference>
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="notification_switch"
+            android:summary="Enable/Disable notifications"
+            android:title="Notifications"></SwitchPreference>
+
+        <ListPreference
+            android:key="pref_key_range"
+            android:summary="The distance range in KM of available games"
+            android:title="Range"
+            android:dialogTitle="Select your prefered range"
+            android:entries="@array/range"
+            android:entryValues="@array/range_values"
+            android:negativeButtonText="@null"
+            android:positiveButtonText="@null"></ListPreference>
+
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="public/priv_switch"
+            android:summary="Public/Private account"
+            android:title="Public/Private"></SwitchPreference>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Contact Information"
+        android:key="personal_key_contactInfo_settings">
+
+        <EditTextPreference
+            android:maxLines="1"
+            android:inputType="textCapWords"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:key="pref_key_email"
+            android:summary="Change your email"
+            android:title="Email"
+            android:defaultValue="dim_Slipknot_12@hotmail.al"></EditTextPreference>
+
+        <EditTextPreference
+            android:maxLines="1"
+            android:inputType="textCapWords"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:key="pref_key_mobileNumber"
+            android:summary="Change your mobile number"
+            android:title="Mobile Number"
+            android:defaultValue="695837673A"></EditTextPreference>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
